@@ -1,7 +1,5 @@
 package configuration.demo;
 
-import java.util.Optional;
-
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
@@ -38,19 +36,6 @@ public class EngineConfig {
     @Min(1L)
     private int cylinders;
     private CrankShaft crankShaft = new CrankShaft();
-
-    @ConfigurationProperties("crank-shaft")
-    public static class CrankShaft {
-        public Optional<Double> getRodLength() {
-            return rodLength;
-        }
-
-        public void setRodLength(Optional<Double> rodLength) {
-            this.rodLength = rodLength;
-        }
-
-        private Optional<Double> rodLength = Optional.empty();
-    }
 }
 
 
