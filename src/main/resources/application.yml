@@ -1,0 +1,8 @@
+micronaut:
+  application:
+    name: configurationDemo
+my:
+  engine:
+    cylinders: 2
+    crank-shaft:
+      rod-length: 5
